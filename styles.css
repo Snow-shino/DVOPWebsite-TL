@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0b0b0b; /* true dark */
+  color: #e5e5e5;
+}
+
+/* NAVBAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-weight: 600;
+  color: #ff7a18;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #ff7a18;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #1a1a1a, #050505);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.hero p {
+  color: #9e9e9e;
+}
+
+/* SECTIONS */
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+/* PROJECT CARDS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111111;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1f1f1f;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #ff7a18;
+  box-shadow: 0 0 15px rgba(255, 122, 24, 0.2);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  color: #ffffff;
+}
+
+.card p {
+  color: #a3a3a3;
+}
+
+.card a {
+  color: #ff7a18;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* CONTACT */
+#contact a {
+  color: #ff7a18;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #050505;
+  border-top: 1px solid #1a1a1a;
+  color: #6b6b6b;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #ff7a18;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #050505;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 15px;
+    border-left: 1px solid #1a1a1a;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
