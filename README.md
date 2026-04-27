@@ -14,7 +14,8 @@
 - git push -u origin master
 - Verified files populated in repository
 
-- Set up and deployed pages in github
+### Set up and deployed pages in github:
+- https://snow-shino.github.io/DVOPWebsite-TL/
 
 ### Notes:
 
