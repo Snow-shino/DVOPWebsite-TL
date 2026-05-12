@@ -1,3 +1,11 @@
+Taylor Lundean
+Demonstration of deploying website to github pages.
+
+
+
+
+# Old:
+
 # Workflow for DVOP Assignment: 
 ## "Github Repository for your AI Website"
 
