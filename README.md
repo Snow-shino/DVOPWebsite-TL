@@ -65,7 +65,9 @@ git push origin master
 - **Manual:** Go to the **Actions** tab in GitHub, select "Deploy static content to Pages", and click **Run workflow**.
 
 ### Challenges Faced
-- No significant challenges were encountered. The branch name in the workflow was already set to `master`, matching this repository's default branch, so no modifications were needed.
+- **Branch name verification:** Had to confirm the repository's default branch was `master` (not `main`) before finalizing the workflow, since an incorrect branch name would prevent the workflow from triggering on push.
+- **Source setting:** GitHub Pages must be explicitly switched to "GitHub Actions" as the source — leaving it on "Deploy from a branch" would cause the old automatic publishing to conflict with the new workflow.
+- **No build step required:** Since this is a static HTML/CSS/JS site with no build process, the `path: '.'` setting in the upload artifact step works correctly without needing to point to a build output directory.
 
 ### Workflow Overview
 The `deploy.yml` workflow:
