@@ -61,8 +61,11 @@ git push origin master
 - Verified the site is live at: https://snow-shino.github.io/DVOPWebsite-TL/
 
 ### How to Trigger Deployment
-- **Automatic:** Push any changes to the `master` branch — the workflow runs automatically.
+- **Automatic:** Push any changes to the `master` branch - the workflow runs automatically.
 - **Manual:** Go to the **Actions** tab in GitHub, select "Deploy static content to Pages", and click **Run workflow**.
+
+### Testing
+To verify the workflow was working end-to-end, I made a real content change to the about page - updating the bio text to be simpler and removing a list item. I committed and pushed the change, then watched the Actions tab to confirm the workflow triggered automatically and completed successfully. I then visited the live site to confirm the updated text appeared. This confirmed the full CI/CD loop was working as expected.
 
 ### Challenges Faced
 - **Branch name verification:** Had to confirm the repository's default branch was `master` (not `main`) before finalizing the workflow, since an incorrect branch name would prevent the workflow from triggering on push.
