@@ -1,3 +1,7 @@
-# Intentional buggy version for assignment troubleshooting step
 FROM nginx:latest
-COPY index.html /usr/share/nginx/html
+
+# Remove default Nginx site files so only project files are served.
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy all static site files, not just index.html.
+COPY . /usr/share/nginx/html
