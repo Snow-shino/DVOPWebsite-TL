@@ -1,7 +1,6 @@
+# Use the official Nginx image as the base image
 FROM nginx:latest
-
-# Remove default Nginx site files so only project files are served.
+# Remove the default Nginx HTML files
 RUN rm -rf /usr/share/nginx/html/*
-
-# Copy all static site files, not just index.html.
+# Copy all website files into the Nginx HTML directory
 COPY . /usr/share/nginx/html
